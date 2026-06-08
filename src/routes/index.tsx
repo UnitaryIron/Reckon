@@ -170,8 +170,8 @@ function Hero() {
           </div>
 
           <div className="mt-6 flex items-center gap-3 text-sm text-muted-foreground">
-            <span className="grid h-7 w-7 place-items-center rounded-full border-2 border-ink bg-cream">🔒</span>
-            <span>Your selfie never leaves your device. <span className="font-hand text-lg text-rust">👍</span></span>
+            <span className="grid h-7 w-7 place-items-center rounded-full border-2 border-ink bg-cream"><FontAwesomeIcon icon={faLock} className="text-sm" /></span>
+            <span>Your selfie never leaves your device. <FontAwesomeIcon icon={faThumbsUp} className="font-hand text-lg text-rust" /></span>
           </div>
         </div>
 
