@@ -274,9 +274,9 @@ function TrustRow() {
 
 function HowItWorks() {
   const steps = [
-    { n: "01", e: "📸", t: "Selfie (or skip)", b: "On-device computer vision peeks at zones — dry, shiny, redness — without sending anything anywhere." },
-    { n: "02", e: "📝", t: "4 lil' questions", b: "How does your skin feel by 3pm? Sunscreen feelings? Budget? Done." },
-    { n: "03", e: "🧠", t: "We match", b: "Our algorithm filters 1,400+ products by your zone profile, goals, and what you'll actually use." },
+    { n: "01", icon: faCamera, t: "Selfie (or skip)", b: "On-device computer vision peeks at zones — dry, shiny, redness — without sending anything anywhere." },
+    { n: "02", icon: faPenToSquare, t: "4 lil' questions", b: "How does your skin feel by 3pm? Sunscreen feelings? Budget? Done." },
+    { n: "03", icon: faBrain, t: "We match", b: "Our algorithm filters 1,400+ products by your zone profile, goals, and what you'll actually use." },
   ];
   return (
     <section id="how" className="relative mx-auto max-w-7xl px-5 py-24 md:px-10">
@@ -294,7 +294,7 @@ function HowItWorks() {
         {steps.map((s, i) => (
           <div key={s.n} className="sticker relative p-6" style={{ transform: `rotate(${i === 1 ? 0.8 : i === 0 ? -1.2 : 1.5}deg)` }}>
             <span className="font-hand text-3xl text-rust">{s.n}</span>
-            <div className="mt-2 text-4xl">{s.e}</div>
+            <div className="mt-2 text-4xl"><FontAwesomeIcon icon={s.icon} /></div>
             <h3 className="mt-3 font-display text-2xl font-bold">{s.t}</h3>
             <p className="mt-2 text-sm text-muted-foreground">{s.b}</p>
           </div>
@@ -400,10 +400,10 @@ function Reassurance() {
   }, []);
 
   const badges = [
-    { e: "🩺", t: "No medical claims", s: "Just smart suggestions." },
-    { e: "🔐", t: "Selfie stays local", s: "We never upload your face." },
-    { e: "🌱", t: "Real ingredients", s: "Cited, sourced, no fluff." },
-    { e: "💸", t: "Budget-aware", s: "From drugstore to splurge." },
+    { icon: faStethoscope, t: "No medical claims", s: "Just smart suggestions." },
+    { icon: faShieldHalved, t: "Selfie stays local", s: "We never upload your face." },
+    { icon: faSeedling, t: "Real ingredients", s: "Cited, sourced, no fluff." },
+    { icon: faWallet, t: "Budget-aware", s: "From drugstore to splurge." },
   ];
 
   return (
@@ -423,7 +423,7 @@ function Reassurance() {
             }}
           >
             <span className="tape -top-2 left-1/2 -translate-x-1/2 rotate-[-3deg]" />
-            <div className="text-3xl">{b.e}</div>
+            <div className="text-3xl"><FontAwesomeIcon icon={b.icon} /></div>
             <h3 className="mt-3 font-display text-lg font-bold">{b.t}</h3>
             <p className="text-sm text-muted-foreground">{b.s}</p>
           </div>
@@ -434,10 +434,10 @@ function Reassurance() {
         <p className="font-hand text-3xl">ok cool, let's actually do the thing →</p>
         <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <a href="#cta" className="sticker px-6 py-3 font-display text-lg font-bold" style={{ background: "var(--rust)", color: "var(--cream)" }}>
-            📸 Snap a Selfie
+            <FontAwesomeIcon icon={faCamera} className="mr-2" /> Snap a Selfie
           </a>
           <a href="#cta" className="sticker bg-paper px-6 py-3 font-display text-lg font-bold">
-            📋 Take the Quiz
+            <FontAwesomeIcon icon={faClipboardList} className="mr-2" /> Take the Quiz
           </a>
         </div>
       </div>
