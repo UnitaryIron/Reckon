@@ -209,7 +209,7 @@ function SelfieCta() {
       style={{ background: "var(--rust)", color: "var(--cream)" }}
     >
       <span className="relative grid h-12 w-12 shrink-0 place-items-center rounded-full border-2 border-cream bg-ink text-xl">
-        📸
+        <FontAwesomeIcon icon={faCamera} className="text-xl" />
         <span className="absolute inset-0 animate-ping rounded-full border-2 border-cream opacity-60 group-hover:opacity-100" />
       </span>
       <span className="flex-1">
@@ -235,7 +235,7 @@ function QuizCta() {
       onMouseLeave={() => setHover(false)}
       className="sticker group relative flex min-w-[240px] items-center gap-4 bg-cream px-5 py-4 text-left"
     >
-      <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full border-2 border-ink bg-mustard text-xl">📋</span>
+      <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full border-2 border-ink bg-mustard text-xl"><FontAwesomeIcon icon={faClipboardList} className="text-xl" /></span>
       <span className="flex-1">
         <span className="block font-display text-lg font-bold">Take the 30‑Second Skin Quiz</span>
         <span className="block text-xs text-muted-foreground">4 questions. Zero homework.</span>
@@ -253,17 +253,17 @@ function QuizCta() {
 
 function TrustRow() {
   const items = [
-    { e: "🧪", t: "1,400+ ingredients indexed" },
-    { e: "👁", t: "On-device selfie scan" },
-    { e: "📭", t: "No spam. Promise." },
-    { e: "💌", t: "Dermatologist-reviewed copy" },
+    { icon: faFlask, t: "1,400+ ingredients indexed" },
+    { icon: faEye, t: "On-device selfie scan" },
+    { icon: faEnvelopeOpen, t: "No spam. Promise." },
+    { icon: faEnvelope, t: "Dermatologist-reviewed copy" },
   ];
   return (
     <section id="trust" className="border-y-2 border-dashed border-ink/30 bg-cream/40 py-5">
       <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-around gap-x-8 gap-y-3 px-5 text-sm font-medium md:px-10">
         {items.map((i) => (
           <span key={i.t} className="flex items-center gap-2">
-            <span className="text-lg">{i.e}</span>
+            <FontAwesomeIcon icon={i.icon} className="text-lg" />
             {i.t}
           </span>
         ))}
