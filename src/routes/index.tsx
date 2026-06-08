@@ -102,9 +102,10 @@ function CustomCursor() {
       className="pointer-events-none fixed left-0 top-0 z-[100] hidden h-9 w-9 items-center justify-center rounded-full bg-cream text-ink shadow-[3px_3px_0_var(--ink)] md:flex"
       style={{ border: "2px solid var(--ink)", transition: "transform 60ms linear" }}
     >
-      <span className="text-base leading-none">
-        {icon === "droplet" ? "💧" : icon === "leaf" ? "🌿" : "✨"}
-      </span>
+      <FontAwesomeIcon
+        icon={icon === "droplet" ? faDroplet : icon === "leaf" ? faLeaf : faWandMagicSparkles}
+        className="text-base"
+      />
     </div>
   );
 }
