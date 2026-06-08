@@ -1,5 +1,26 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCamera,
+  faClipboardList,
+  faDroplet,
+  faLeaf,
+  faWandMagicSparkles,
+  faRobot,
+  faLock,
+  faThumbsUp,
+  faFlask,
+  faEye,
+  faEnvelopeOpen,
+  faEnvelope,
+  faPenToSquare,
+  faBrain,
+  faStethoscope,
+  faShieldHalved,
+  faSeedling,
+  faWallet,
+} from "@fortawesome/free-solid-svg-icons";
 import paperBg from "@/assets/paper-bg.jpg";
 import blobRust from "@/assets/blob-rust.png";
 import blobMustard from "@/assets/blob-mustard.png";
