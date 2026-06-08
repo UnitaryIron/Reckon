@@ -115,7 +115,7 @@ function Nav() {
     <header className="relative z-20 mx-auto flex max-w-7xl items-center justify-between px-5 py-6 md:px-10">
       <a href="/" className="flex items-center gap-2">
         <span className="grid h-10 w-10 place-items-center rounded-full border-[2.5px] border-ink bg-mustard shadow-[3px_3px_0_var(--ink)]">
-          <span className="text-lg">🤖</span>
+          <FontAwesomeIcon icon={faRobot} className="text-lg" />
         </span>
         <span className="font-display text-2xl font-extrabold tracking-tight">dewy.</span>
         <span className="ml-1 hidden font-hand text-xl text-rust md:inline">est. 1998 (vibes)</span>
