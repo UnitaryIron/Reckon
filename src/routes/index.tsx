@@ -1,5 +1,26 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCamera,
+  faClipboardList,
+  faDroplet,
+  faLeaf,
+  faWandMagicSparkles,
+  faRobot,
+  faLock,
+  faThumbsUp,
+  faFlask,
+  faEye,
+  faEnvelopeOpen,
+  faEnvelope,
+  faPenToSquare,
+  faBrain,
+  faStethoscope,
+  faShieldHalved,
+  faSeedling,
+  faWallet,
+} from "@fortawesome/free-solid-svg-icons";
 import paperBg from "@/assets/paper-bg.jpg";
 import blobRust from "@/assets/blob-rust.png";
 import blobMustard from "@/assets/blob-mustard.png";
@@ -81,9 +102,10 @@ function CustomCursor() {
       className="pointer-events-none fixed left-0 top-0 z-[100] hidden h-9 w-9 items-center justify-center rounded-full bg-cream text-ink shadow-[3px_3px_0_var(--ink)] md:flex"
       style={{ border: "2px solid var(--ink)", transition: "transform 60ms linear" }}
     >
-      <span className="text-base leading-none">
-        {icon === "droplet" ? "💧" : icon === "leaf" ? "🌿" : "✨"}
-      </span>
+      <FontAwesomeIcon
+        icon={icon === "droplet" ? faDroplet : icon === "leaf" ? faLeaf : faWandMagicSparkles}
+        className="text-base"
+      />
     </div>
   );
 }
@@ -93,7 +115,7 @@ function Nav() {
     <header className="relative z-20 mx-auto flex max-w-7xl items-center justify-between px-5 py-6 md:px-10">
       <a href="/" className="flex items-center gap-2">
         <span className="grid h-10 w-10 place-items-center rounded-full border-[2.5px] border-ink bg-mustard shadow-[3px_3px_0_var(--ink)]">
-          <span className="text-lg">🤖</span>
+          <FontAwesomeIcon icon={faRobot} className="text-lg" />
         </span>
         <span className="font-display text-2xl font-extrabold tracking-tight">dewy.</span>
         <span className="ml-1 hidden font-hand text-xl text-rust md:inline">est. 1998 (vibes)</span>
@@ -148,8 +170,8 @@ function Hero() {
           </div>
 
           <div className="mt-6 flex items-center gap-3 text-sm text-muted-foreground">
-            <span className="grid h-7 w-7 place-items-center rounded-full border-2 border-ink bg-cream">🔒</span>
-            <span>Your selfie never leaves your device. <span className="font-hand text-lg text-rust">👍</span></span>
+            <span className="grid h-7 w-7 place-items-center rounded-full border-2 border-ink bg-cream"><FontAwesomeIcon icon={faLock} className="text-sm" /></span>
+            <span>Your selfie never leaves your device. <FontAwesomeIcon icon={faThumbsUp} className="font-hand text-lg text-rust" /></span>
           </div>
         </div>
 
@@ -187,7 +209,7 @@ function SelfieCta() {
       style={{ background: "var(--rust)", color: "var(--cream)" }}
     >
       <span className="relative grid h-12 w-12 shrink-0 place-items-center rounded-full border-2 border-cream bg-ink text-xl">
-        📸
+        <FontAwesomeIcon icon={faCamera} className="text-xl" />
         <span className="absolute inset-0 animate-ping rounded-full border-2 border-cream opacity-60 group-hover:opacity-100" />
       </span>
       <span className="flex-1">
@@ -213,7 +235,7 @@ function QuizCta() {
       onMouseLeave={() => setHover(false)}
       className="sticker group relative flex min-w-[240px] items-center gap-4 bg-cream px-5 py-4 text-left"
     >
-      <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full border-2 border-ink bg-mustard text-xl">📋</span>
+      <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full border-2 border-ink bg-mustard text-xl"><FontAwesomeIcon icon={faClipboardList} className="text-xl" /></span>
       <span className="flex-1">
         <span className="block font-display text-lg font-bold">Take the 30‑Second Skin Quiz</span>
         <span className="block text-xs text-muted-foreground">4 questions. Zero homework.</span>
@@ -231,17 +253,17 @@ function QuizCta() {
 
 function TrustRow() {
   const items = [
-    { e: "🧪", t: "1,400+ ingredients indexed" },
-    { e: "👁", t: "On-device selfie scan" },
-    { e: "📭", t: "No spam. Promise." },
-    { e: "💌", t: "Dermatologist-reviewed copy" },
+    { icon: faFlask, t: "1,400+ ingredients indexed" },
+    { icon: faEye, t: "On-device selfie scan" },
+    { icon: faEnvelopeOpen, t: "No spam. Promise." },
+    { icon: faEnvelope, t: "Dermatologist-reviewed copy" },
   ];
   return (
     <section id="trust" className="border-y-2 border-dashed border-ink/30 bg-cream/40 py-5">
       <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-around gap-x-8 gap-y-3 px-5 text-sm font-medium md:px-10">
         {items.map((i) => (
           <span key={i.t} className="flex items-center gap-2">
-            <span className="text-lg">{i.e}</span>
+            <FontAwesomeIcon icon={i.icon} className="text-lg" />
             {i.t}
           </span>
         ))}
@@ -252,9 +274,9 @@ function TrustRow() {
 
 function HowItWorks() {
   const steps = [
-    { n: "01", e: "📸", t: "Selfie (or skip)", b: "On-device computer vision peeks at zones — dry, shiny, redness — without sending anything anywhere." },
-    { n: "02", e: "📝", t: "4 lil' questions", b: "How does your skin feel by 3pm? Sunscreen feelings? Budget? Done." },
-    { n: "03", e: "🧠", t: "We match", b: "Our algorithm filters 1,400+ products by your zone profile, goals, and what you'll actually use." },
+    { n: "01", icon: faCamera, t: "Selfie (or skip)", b: "On-device computer vision peeks at zones — dry, shiny, redness — without sending anything anywhere." },
+    { n: "02", icon: faPenToSquare, t: "4 lil' questions", b: "How does your skin feel by 3pm? Sunscreen feelings? Budget? Done." },
+    { n: "03", icon: faBrain, t: "We match", b: "Our algorithm filters 1,400+ products by your zone profile, goals, and what you'll actually use." },
   ];
   return (
     <section id="how" className="relative mx-auto max-w-7xl px-5 py-24 md:px-10">
@@ -272,7 +294,7 @@ function HowItWorks() {
         {steps.map((s, i) => (
           <div key={s.n} className="sticker relative p-6" style={{ transform: `rotate(${i === 1 ? 0.8 : i === 0 ? -1.2 : 1.5}deg)` }}>
             <span className="font-hand text-3xl text-rust">{s.n}</span>
-            <div className="mt-2 text-4xl">{s.e}</div>
+            <div className="mt-2 text-4xl"><FontAwesomeIcon icon={s.icon} /></div>
             <h3 className="mt-3 font-display text-2xl font-bold">{s.t}</h3>
             <p className="mt-2 text-sm text-muted-foreground">{s.b}</p>
           </div>
@@ -378,10 +400,10 @@ function Reassurance() {
   }, []);
 
   const badges = [
-    { e: "🩺", t: "No medical claims", s: "Just smart suggestions." },
-    { e: "🔐", t: "Selfie stays local", s: "We never upload your face." },
-    { e: "🌱", t: "Real ingredients", s: "Cited, sourced, no fluff." },
-    { e: "💸", t: "Budget-aware", s: "From drugstore to splurge." },
+    { icon: faStethoscope, t: "No medical claims", s: "Just smart suggestions." },
+    { icon: faShieldHalved, t: "Selfie stays local", s: "We never upload your face." },
+    { icon: faSeedling, t: "Real ingredients", s: "Cited, sourced, no fluff." },
+    { icon: faWallet, t: "Budget-aware", s: "From drugstore to splurge." },
   ];
 
   return (
@@ -401,7 +423,7 @@ function Reassurance() {
             }}
           >
             <span className="tape -top-2 left-1/2 -translate-x-1/2 rotate-[-3deg]" />
-            <div className="text-3xl">{b.e}</div>
+            <div className="text-3xl"><FontAwesomeIcon icon={b.icon} /></div>
             <h3 className="mt-3 font-display text-lg font-bold">{b.t}</h3>
             <p className="text-sm text-muted-foreground">{b.s}</p>
           </div>
@@ -412,10 +434,10 @@ function Reassurance() {
         <p className="font-hand text-3xl">ok cool, let's actually do the thing →</p>
         <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <a href="#cta" className="sticker px-6 py-3 font-display text-lg font-bold" style={{ background: "var(--rust)", color: "var(--cream)" }}>
-            📸 Snap a Selfie
+            <FontAwesomeIcon icon={faCamera} className="mr-2" /> Snap a Selfie
           </a>
           <a href="#cta" className="sticker bg-paper px-6 py-3 font-display text-lg font-bold">
-            📋 Take the Quiz
+            <FontAwesomeIcon icon={faClipboardList} className="mr-2" /> Take the Quiz
           </a>
         </div>
       </div>
