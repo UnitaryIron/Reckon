@@ -181,10 +181,10 @@ function Hero() {
             <span className="tape -top-2 left-8 rotate-[-6deg]" />
             <span className="tape -top-2 right-8 rotate-[5deg]" />
             <div className="rounded-2xl bg-paper p-4">
-              <img src={botMascot} alt="Dewy, the friendly skincare bot" className="mx-auto h-56 w-auto wobble" width={400} height={400} />
+              <img src={botMascot} alt="Reckon, the friendly skincare bot" className="mx-auto h-56 w-auto wobble" width={400} height={400} />
             </div>
             <p className="mt-4 text-center font-hand text-2xl text-ink">
-              "Hi! I'm Dewy. I've read every ingredient label so you don't have to."
+              "Hi! I'm Reckon. I've read every ingredient label so you don't have to."
             </p>
             <div className="mt-3 flex justify-center gap-1">
               <span className="h-2 w-2 rounded-full bg-rust blink-dot" />
