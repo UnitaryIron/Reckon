@@ -454,7 +454,7 @@ function Footer() {
   return (
     <footer className="border-t-2 border-dashed border-ink/30 py-10">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-5 text-sm text-muted-foreground md:flex-row md:px-10">
-        <div className="font-hand text-lg text-ink">dewy © {new Date().getFullYear()} — made with dry hands</div>
+        <div className="font-hand text-lg text-ink">Reckon © {new Date().getFullYear()} — made with dry hands</div>
         <div className="flex gap-5">
           <a href="#" className="hover:text-rust">Privacy (the good kind)</a>
           <a href="#" className="hover:text-rust">Sources</a>
