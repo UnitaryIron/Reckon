@@ -116,7 +116,7 @@ function Nav() {
         <span className="grid h-10 w-10 place-items-center rounded-full border-[2.5px] border-ink bg-mustard shadow-[3px_3px_0_var(--ink)]">
           <FontAwesomeIcon icon={faLeaf} className="w-5 h-5" />
         </span>
-        <span className="font-display text-2xl font-extrabold tracking-tight">Reckon (NB: logo is temporary)</span>
+        <span className="font-display text-2xl font-extrabold tracking-tight">Reckon</span>
         <span className="ml-1 hidden font-hand text-xl text-rust md:inline">est. 1998 (vibes)</span>
       </a>
       <nav className="hidden items-center gap-8 text-sm font-medium md:flex">
