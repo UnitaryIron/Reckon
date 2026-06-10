@@ -116,7 +116,7 @@ function Nav() {
         <span className="grid h-10 w-10 place-items-center rounded-full border-[2.5px] border-ink bg-mustard shadow-[3px_3px_0_var(--ink)]">
           <FontAwesomeIcon icon={faLeaf} className="w-5 h-5" />
         </span>
-        <span className="font-display text-2xl font-extrabold tracking-tight">Reckon (NB: logo is temporary)</span>
+        <span className="font-display text-2xl font-extrabold tracking-tight">Reckon</span>
         <span className="ml-1 hidden font-hand text-xl text-rust md:inline">est. 1998 (vibes)</span>
       </a>
       <nav className="hidden items-center gap-8 text-sm font-medium md:flex">
@@ -181,10 +181,10 @@ function Hero() {
             <span className="tape -top-2 left-8 rotate-[-6deg]" />
             <span className="tape -top-2 right-8 rotate-[5deg]" />
             <div className="rounded-2xl bg-paper p-4">
-              <img src={botMascot} alt="Dewy, the friendly skincare bot" className="mx-auto h-56 w-auto wobble" width={400} height={400} />
+              <img src={botMascot} alt="Reckon, the friendly skincare bot" className="mx-auto h-56 w-auto wobble" width={400} height={400} />
             </div>
             <p className="mt-4 text-center font-hand text-2xl text-ink">
-              "Hi! I'm Dewy. I've read every ingredient label so you don't have to."
+              "Hi! I'm Reckon. I've read every ingredient label so you don't have to."
             </p>
             <div className="mt-3 flex justify-center gap-1">
               <span className="h-2 w-2 rounded-full bg-rust blink-dot" />
@@ -454,7 +454,7 @@ function Footer() {
   return (
     <footer className="border-t-2 border-dashed border-ink/30 py-10">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-5 text-sm text-muted-foreground md:flex-row md:px-10">
-        <div className="font-hand text-lg text-ink">dewy © {new Date().getFullYear()} — made with dry hands</div>
+        <div className="font-hand text-lg text-ink">Reckon © {new Date().getFullYear()} — made with dry hands</div>
         <div className="flex gap-5">
           <a href="#" className="hover:text-rust">Privacy (the good kind)</a>
           <a href="#" className="hover:text-rust">Sources</a>
